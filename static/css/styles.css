@@ -1,0 +1,240 @@
+:root {
+    --base: #042050;
+    --shade: #D0A616;
+    --text: #FFEFCA;
+    --footer: #857555;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*navigation header*/
+
+.nav-bar {
+    background: #ffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 16px 24px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 24px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-bar .logo {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-bar .logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #042050;
+}
+
+.nav-bar .nav-items {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar .nav-items li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-bar .nav-items li a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 8px 16px;
+    color: #042050;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+    border-radius: 16px;
+}
+
+.nav-bar .nav-items li a:hover {
+    background-color: #042050;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+/*hero area*/
+section {
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to left bottom, #c8dcff, #e2c2ff, #ff9ed7, #ff8583, #ff9100);
+}
+
+.sub-container {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 32px;
+}
+
+.sub-container .text-bx {
+    position: relative;
+    width: 50%;
+}
+
+.sub-container .text-bx h1 {
+    font-size: 3.4em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #042050;
+}
+
+.sub-container .text-bx p {
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2F4858;
+    padding: 16px 0;
+    text-align: justify;
+}
+
+.text-bx .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.text-bx .btn a {
+    text-decoration: none;
+    color: #042050;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: solid 2px #042050;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.text-bx .btn a:nth-child(1) {
+    background-color: #042050;
+    color: #ffff;
+}
+
+.text-bx .btn a:nth-child(1):hover {
+    background: none;
+    color: #042050;
+    border: solid 2px #042050;
+}
+
+.text-bx .btn a:nth-child(2):hover {
+    background: #042050;
+    color: #ffff;
+}
+
+.social-ico-lnk {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-ico-lnk i {
+    color: #042050;
+    font-size: 32px;
+    display: inline-block;
+    padding: 0 24px;
+}
+
+/*social help info*/
+
+.global-user {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 56px 0;
+    background: var(--base);
+}
+
+.global-user .text-bx {
+    line-height: 32px;
+    text-align: center;
+    position: relative;
+}
+
+.global-user .text-bx .content-bx{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 16px;
+}
+
+.global-user .text-bx p {
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.global-user .text-bx .content-bx h4 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.global-user .text-bx i {
+    font-size: 56px;
+    color: var(--text);
+}
+
+.global-user .cta a {
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.5;
+}
+
+.global-user .cta .fa-search{
+    font-size: 24px;
+}
+
+.global-user .cta input {
+    background: none;
+    border: none;
+    padding: 8px 8px;
+    font-size: 16px;
+    border-bottom: solid 2px var(--text);
+    color: var(--text);
+    font-weight: 300;
+    outline: none;
+}
+
+.global-user .cta h4 {
+    color: var(--text);
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
