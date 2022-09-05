@@ -2,11 +2,14 @@
     --base: #042050;
     --shade: #D0A616;
     --text: #FFEFCA;
-    --footer: #857555;
+    --footer: #102A30;
+    
 }
 
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -77,164 +80,188 @@
 
 /*hero area*/
 section {
-    top: 0;
-    left: 0;
+    padding: 72px;
+}
+
+.hero {
+    position: relative;
+    background: url(../images/gradient.png);
     background-size: cover;
     background-position: right;
-    width: 100%;
     min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to left bottom, #c8dcff, #e2c2ff, #ff9ed7, #ff8583, #ff9100);
-}
-
-.sub-container {
-    position: relative;
+    text-align: center;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 32px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.sub-container .text-bx {
+.hero .content {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 50%;
+    justify-content: center;
+    align-items: center;
+/*    padding: 72px 0;*/
+    margin-top: 180px;
 }
 
-.sub-container .text-bx h1 {
-    font-size: 3.4em;
+.hero .content .heading {
+    font-size: 2.7em;
     text-transform: uppercase;
     font-weight: 600;
-    color: #042050;
+    line-height: 64px;
+    padding-bottom: 32px;
+    color: var(--text);
 }
 
-.sub-container .text-bx p {
-    font-size: 0.9em;
-    font-weight: 400;
-    line-height: 20px;
-    color: #2F4858;
-    padding: 16px 0;
+.hero .content .content-bx {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 64px;
+    color: lightcyan;
+    width: 80%;
+/*    margin: 0 104px;*/
     text-align: justify;
 }
 
-.text-bx .btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 24px 0;
-}
-
-.text-bx .btn a {
-    text-decoration: none;
-    color: #042050;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: solid 2px #042050;
-    margin: 0 8px;
-    display: inline-block;
-}
-
-.text-bx .btn a:nth-child(1) {
-    background-color: #042050;
-    color: #ffff;
-}
-
-.text-bx .btn a:nth-child(1):hover {
-    background: none;
-    color: #042050;
-    border: solid 2px #042050;
-}
-
-.text-bx .btn a:nth-child(2):hover {
-    background: #042050;
-    color: #ffff;
-}
-
-.social-ico-lnk {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-ico-lnk i {
-    color: #042050;
-    font-size: 32px;
-    display: inline-block;
+.hero .content .btn {
+    margin: 64px;
     padding: 0 24px;
 }
 
-/*social help info*/
-
-.global-user {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 56px 0;
-    background: var(--base);
-}
-
-.global-user .text-bx {
-    line-height: 32px;
-    text-align: center;
-    position: relative;
-}
-
-.global-user .text-bx .content-bx{
-    position: relative;
-    display: inline-block;
-    text-align: left;
-    padding-left: 16px;
-}
-
-.global-user .text-bx p {
-    color: var(--text);
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.global-user .text-bx .content-bx h4 {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--text);
-    text-transform: uppercase;
-}
-
-.global-user .text-bx i {
-    font-size: 56px;
-    color: var(--text);
-}
-
-.global-user .cta a {
+.hero .content .btn a {
+    margin: auto 16px;
+    padding: 8px 16px;
+    font-size: 21px;
     text-decoration: none;
+    color: var(--text) ;
+    text-transform: capitalize;
+    border: solid 2px var(--text);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+.icons {
+    position: relative;
+    padding: 32px;
+    margin-bottom: 16px;
+}
+
+.icons i {
+    font-size: 32px;
+    padding: 16px;
     color: var(--text);
-    opacity: 0.5;
 }
 
-.global-user .cta .fa-search{
-    font-size: 24px;
+.search {
+    position: absolute;
+    width: 80%;
+    padding: 16px 24px;
+    background: none;
+    margin-top: 24px;
+/*    border-radius: 30px 0;*/
+/*
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    
+*/
 }
 
-.global-user .cta input {
+.search .heading {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+/*    margin-left: 130px;*/
+    text-transform: capitalize;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 24px;
+}
+
+.search input[type="text"] {
     background: none;
     border: none;
-    padding: 8px 8px;
-    font-size: 16px;
-    border-bottom: solid 2px var(--text);
-    color: var(--text);
-    font-weight: 300;
     outline: none;
+    border-bottom: solid 2px var(--text);
+    width: 80%;
+    padding-bottom: 16px;
+    font-size: 21px;
+    color: var(--text);
+    text-transform: capitalize
 }
 
-.global-user .cta h4 {
+.search button {
+    background: none;
     color: var(--text);
+    border: none;
+    font-size: 21px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-left: -32px;
+}
+
+.services .text-bx {
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.services .text-bx h3 {
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.services .text-bx h4 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #636361;
     text-transform: capitalize;
+}
+
+.services .text-bx p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2c;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .service-bx img {
+    max-width: 256px;
+}
+
+.services .content .service-bx {
+    max-width: 320px;
+    padding: 40px 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+}
+
+.services .content .service-bx h2 {
+    text-transform: uppercase;
+}
+ 
+.services .content .service-bx p {
+    text-align: justify;
+    color: #636361;
+}
+
+.services .content .service-bx img, h2, p {
     padding-bottom: 16px;
+}
+
+.services .content .service-bx .btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    
 }
