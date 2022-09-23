@@ -14,16 +14,17 @@
 <body>
     <!--    header with nav-bar-->
     <header class="nav-bar">
-        <label class="logo"><a href="#">mawd</a></label>
+        <label class="logo"><a href="#home">mawd</a></label>
         <ul class="nav-items">
-            <li><a href="#">home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#clients">clients</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </header>
     <!--    hero area-->
-    <section class="benner">
+    <section class="benner" id="home">
         <div class="content">
             <div class="hero-title">
                 <h1>Lead generation <span>experts</span></h1>
@@ -55,7 +56,7 @@
 
     <!--    services section-->
 
-    <section class="services">
+    <section class="services" id="service">
         <div class="heading">
             <h3>Our Services</h3>
             <h4>We can help you with</h4>
@@ -98,7 +99,7 @@
 
     <!--    testinomials-->
 
-    <section class="testinomial">
+    <section class="testinomial" id="clients">
         <div class="heading white">
             <h3>Our clients</h3>
         </div>
@@ -154,7 +155,7 @@
         </div>
     </div>
     <!--    about us-->
-    <section class="aboutus-container">
+    <section class="aboutus-container" id="about">
         <div class="heading">
             <h3 data-heading="intro">about us</h3>
         </div>
@@ -171,6 +172,26 @@
     </section>
     
 <!--    contact information-->
+   <section class="contact-container" id="contact">
+       <div class="heading contact-heading">
+            <h3>Supporting You Every Step of the Way</h3>
+            <p>Whether you have a simple question or a complex issue, our team is here to help you build incredible websites and amplify your skills.</p>
+            <a href="#" class="btn alt-btn">contact</a>
+        </div>
+   </section>
+   
+   <footer>
+       <label class="logo"><a href="#">mawd</a></label>
+       <div class="text">
+           <p>copyrights &copy; all rights reserved 2022 @ <span>code4mind</span></p>
+       </div>
+       <div class="sco-icons">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+   </footer>
     <!--script swapper-->
     <script src="static/js/main.js"></script>
 </body>

@@ -30,6 +30,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -107,7 +108,7 @@
     padding: 8px 16px;
     color: #042050;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     transition: 0.5s;
     border-radius: 16px;
@@ -244,6 +245,7 @@ section {
     font-weight: 300;
     padding: 16px;
     color: #e5e8ed;
+    text-align: right;
     text-transform: capitalize;
     letter-spacing: 1.5px;
     line-height: 24px;
@@ -542,6 +544,8 @@ section {
     height: 180px;
     border-bottom: 10px solid #e20c5a;
     border-right: 10px solid #e20c5a;
+    right: 0;
+    bottom: 0;
     margin: -24px;
 }
 
@@ -568,4 +572,70 @@ section {
     font-weight: 200;
     text-align: justify;
     color: grey;
+}
+
+.contact-container {
+    background: var(--tawny-port);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-heading h3 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #e5e8ed;
+    padding-bottom: 16px;
+}
+
+.contact-heading p {
+    font-size: 14px;
+    font-weight: 1.25rem;
+    color: var(--deep-blush);
+    padding-bottom: 16px;
+}
+
+.alt-btn:hover{
+    color: var(--danube);
+    border: 2px solid var(--danube);
+}
+
+footer {
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    padding: 24px;
+    text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #042050;
+}
+
+.text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: var(--tawny-port);
+}
+.text span {
+    color: #e20c5a;
+}
+
+.sco-icons i {
+    font-size: 24px;
+    color: #e20c5a;
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+.sco-icons i:hover {
+    color: #042050;
 }
