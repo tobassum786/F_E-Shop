@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --blue: #17489C;
     --tone2: #4F150C;
@@ -29,7 +31,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -100,6 +102,7 @@
     list-style: none;
 }
 
+
 .nav-bar .nav-items li a {
     position: relative;
     text-decoration: none;
@@ -122,6 +125,7 @@
     transition: 0.5s;
 }
 
+
 /*hero area*/
 section {
     padding: 100px;
@@ -133,8 +137,8 @@ section {
     background: url(../images/gradient.png);
     background-position: right;
     background-size: cover;
+    display: flex;
     min-height: 100vh;
-    min-width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -321,8 +325,8 @@ section {
 .service-content .content-bx {
     background: var(--affair);
     display: flex;
-/*    max-width: 350px;*/
-    padding: 20px 20px;
+    flex-direction: row;
+    padding: 5px 20px;
     margin: 24px;
     text-align: center;
     border-radius: 10px;
@@ -334,10 +338,11 @@ section {
 }
 
 .image {
-    max-width: 250px;
+    max-width: 350px;
     max-height: 250px;
     width: 100%;
     border-radius: 10px;
+    margin: 24px;
 }
 
 .service-content .content-bx h2 {
@@ -376,12 +381,11 @@ section {
 
 .slideshow-container {
     position: relative;
-    display: block;
+    background: #C2C3D3;
 }
 
 .slideshow {
     position: relative;
-    display: flex;
     justify-content: space-between;
     padding: 50px;
     display: none;
@@ -404,21 +408,25 @@ section {
     height: 80px;
     border-bottom: 5px solid #e20c5a;
     border-right: 5px solid #e20c5a;
-    margin-top: 235px;
-    margin-left: -45px;
+    margin-top: -50px;
+    margin-left: 185px;
 }
 
 .slide-image {
-    max-width: 200px;
-    max-height: 280px;
+    width: 50%;
+}
+
+.slide-image img {
+    max-width: 100%;
+    display: block;
 }
 
 .slide-text {
-    width: 60%;
+    width: 80%;
 }
 
 .slide-text h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
     text-transform: capitalize;
     color: #e20c5a;
@@ -427,7 +435,7 @@ section {
 .slide-text span {
     font-size: 14px;
     font-weight: 300;
-    color: gray;
+    color: 444885;
     text-transform: capitalize;
 }
 
@@ -443,7 +451,7 @@ section {
     display: flex;
     margin-top: 32px;
     align-items: center;
-    color: gray;
+    color: #042050;
 }
 
 .fade {
@@ -550,15 +558,17 @@ section {
 }
 
 .about-content .image-container {
-    max-width: 45%;
+    width: 50%;
 }
 
 .about-content .image-container img {
-    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 .about-content .text-box {
     width: 50%;
+    margin-left: 32px;
 }
 
 .about-content .text-box h3 {
@@ -569,7 +579,7 @@ section {
 }
 .about-content .text-box p {
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 400;
     text-align: justify;
     color: grey;
 }
@@ -621,7 +631,7 @@ footer {
 .text {
     text-align: center;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 400;
     text-transform: capitalize;
     color: var(--tawny-port);
 }
@@ -639,3 +649,8 @@ footer {
 .sco-icons i:hover {
     color: #042050;
 }
+
+
+/*responsive*/
+
+
