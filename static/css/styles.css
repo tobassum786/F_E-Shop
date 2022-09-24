@@ -37,16 +37,14 @@
 
 
 .btn {
-    position: absolute;
     text-decoration: none;
-    margin-right: 16px;
-    padding: 8px 16px;
+    padding: 5px 16px;
     color: #e5e8ed;
-    background: transparent;
+    background: #042050;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
-    /*    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;*/
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     border: 2px solid #e5e8ed;
     transition: 0.5s;
 }
@@ -137,33 +135,32 @@ section {
     background: url(../images/gradient.png);
     background-position: right;
     background-size: cover;
-    display: flex;
+    background-repeat: no-repeat;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.benner .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 64px 0 0 0;
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-gap: 2rem;
+    padding: 24px;
     justify-content: space-between;
 }
 
+
 .benner .hero-title h1 {
     font-size: 4em;
-    font-weight: 900;
-    text-align: left;
+    font-weight: 800;
     text-transform: uppercase;
     color: #e20c5a;
     line-height: 72px;
-    padding-bottom: 24px;
-    width: 60%;
+    margin-bottom: 24px;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
     letter-spacing: 2px;
 }
+
 
 .benner .hero-title h1 span {
     text-transform: uppercase;
@@ -171,32 +168,25 @@ section {
 
 }
 
-.content .text-bx {
-    width: 60%;
-    position: relative;
-    padding-bottom: 24px;
-}
-
 .content .text-bx p {
     width: 100%;
     color: #759484;
+    padding: 24px 0;
 }
 
 .content .cta-btn {
     position: relative;
-    display: flex;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .content .cta-btn a {
     text-decoration: none;
-    margin-right: 16px;
-    padding: 8px 16px;
+    padding: 5px 16px;
     color: #e5e8ed;
     background: #042050;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     border: 2px solid #e5e8ed;
@@ -212,39 +202,36 @@ section {
 }
 
 .content .sco-icons {
-    position: relative;
-    padding: 0 40px;
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    align-self: flex-end;
 }
 
 .content .sco-icons i {
-    margin-top: 16px;
-    display: flex;
-    font-size: 16px;
-    margin-right: 16px;
-    padding: 8px;
+    font-size: 24px;
     color: #e5e8ed;
-    border: 1px solid #e5e8ed;
-    border-radius: 100%;
-    cursor: pointer;
+    padding: 8px;
+    border: 2px solid #e5e8ed;
+    margin: 0 8px;
+    display: flex;
+    border-radius: 50%;
+    transition: .5s;
 }
 
 .content .sco-icons i:hover {
     color: #e20c5a;
+    border: 2px solid #e20c5a;
+    transition: .5s;
 }
 
-.search {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: linear-gradient(to right, #042050 40%, #e20c5a 0%);
+.search::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .search h4 {
+    background: #e20c5a;
     font-size: 18px;
     font-weight: 300;
     padding: 16px;
@@ -253,29 +240,35 @@ section {
     text-transform: capitalize;
     letter-spacing: 1.5px;
     line-height: 24px;
-    margin-left: 100px;
 }
 
-.search form {
-    position: relative;
-    width: 60%;
-    display: inline-block;
+.search-input{
+    background: #042050;
+    float: left;
 }
 
+.column-left {
+    width: 30%;
+}
+
+
+.column-right {
+    width: 70%;
+    padding: 7.5px;
+}
 .search form input {
     background: none;
     outline: none;
     border: none;
-    border-bottom: 2px solid #042050;
-    width: 80%;
+    border-bottom: 2px solid #e20c5a;
     padding: 16px;
     font-size: 21px;
-    color: #042050;
+    color: #e20c5a;
+    width: 90%;
 }
 
 ::placeholder {
     font-size: 21px;
-    color: #004066;
     text-transform: capitalize;
 }
 
@@ -287,7 +280,7 @@ section {
 }
 
 .search form i:hover {
-    color: #042050;
+    color: #e20c5a;
 }
 
 
@@ -327,7 +320,7 @@ section {
     display: flex;
     flex-direction: row;
     padding: 5px 20px;
-    margin: 24px;
+    margin: 24px 0;
     text-align: center;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
@@ -337,12 +330,14 @@ section {
     padding: 24px;
 }
 
+.img-box {
+    width: 80%;
+}
+
 .image {
-    max-width: 350px;
-    max-height: 250px;
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
-    margin: 24px;
+    margin: 24px 0;
 }
 
 .service-content .content-bx h2 {
@@ -363,7 +358,6 @@ section {
 
 .btn-sec {
     position: relative;
-    display: inline-block;
     float: right;
 }
 
@@ -606,11 +600,6 @@ section {
     padding-bottom: 16px;
 }
 
-.alt-btn:hover{
-    color: var(--danube);
-    border: 2px solid var(--danube);
-}
-
 footer {
     position: relative;
     justify-content: space-around;
@@ -653,4 +642,6 @@ footer {
 
 /*responsive*/
 
-
+@meida screen and (min-width = 990px) {
+    
+}
