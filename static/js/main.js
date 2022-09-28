@@ -12,3 +12,11 @@ function showSlides() {
   slides[slideIndex-1].style.display = "flex";
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
+
+
+function toggleMenu() {
+    var menuToggle = document.querySelector('.burger-menu');
+    var menu = document.querySelector('#menu');
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+}
