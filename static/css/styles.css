@@ -102,13 +102,12 @@
     list-style: none;
 }
 
-.active {
+.nav-bar .nav-items li a.active {
     background-color: #e20c5a;
-    color: white;
+    color: #ffff;
     padding: 8px 16px;
     border-radius: 16px;
 }
-
 
 .nav-bar .nav-items li a {
     text-decoration: none;
@@ -178,7 +177,7 @@ section {
 
 .content .text-bx p {
     width: 100%;
-    color: #759484;
+    color: rgba(245, 244, 245, 0.8);
     padding: 24px 0;
 }
 
@@ -241,7 +240,7 @@ section {
 .search h4 {
     background: #e20c5a;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     padding: 16px;
     color: #e5e8ed;
     text-align: right;
@@ -268,6 +267,7 @@ section {
     background: none;
     outline: none;
     border: none;
+    max-width: 100%;
     border-bottom: 2px solid #e20c5a;
     padding: 16px;
     font-size: 21px;
@@ -280,11 +280,17 @@ section {
     text-transform: capitalize;
 }
 
+.search form {
+    display: flex;
+}
+
 .search form i {
-    font-size: 21px;
-    color: #e5e8ed;
+    padding: 16px;
+    margin-left: -40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
     cursor: pointer;
-    margin: -40px;
 }
 
 .search form i:hover {
@@ -318,97 +324,75 @@ section {
 
 .service-content {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    
+    gap: 32px;
 }
 
 .service-content .content-bx {
-    background: var(--affair);
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    padding: 5px 20px;
-    margin: 24px 0;
+    width: 400px;
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    padding: 10px;
+    box-shadow: -5px 0px 24px 4px rgba(0,0,0,0.1);
 }
 
-.text-content {
-    margin: 24px;
+.service-content .content-bx .img-box {
+    margin-bottom: 10px;
 }
 
-.img-box {
-    width: 80%;
-}
-
-.image {
-    align-self: center;
+.service-content .content-bx .img-box img {
     max-width: 100%;
-    border-radius: 10px;
-    margin: 8px 0;
 }
 
-.service-content .content-bx h2 {
-    font-size: 24px;
+.service-content .content-bx .text-content {
+    padding: 16px 32px;
+}
+
+.service-content .content-bx .text-content h5 {
+    font-size: 20px;
     font-weight: 600;
-    text-transform: uppercase;
-    color: var(--deep-blush);
-    text-align: left;
+    text-transform: capitalize;
+    padding-bottom: 8px;
 }
 
-.service-content .content-bx p {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 8px;
-    text-align: justify;
-    color: #e5e8ed;
+.service-content .content-bx .text-content p {
+    font-size: 14px;
+    color: gray;
 }
 
 .btn-sec {
-    position: relative;
-    float: right;
-    
+    float: right; 
 }
 
-.testinomial::before {
-    content: '';
-    position: absolute;
-    min-width: 30vw;
-    min-height: 115vh;
-    background: #042050;
-    left: 0;
-    top: 0;
-}
+/*testinomial*/
 
 .testinomial {
     position: relative;
     min-height: 100vh;
+    background: #042050;
 }
 
 .heading.white h3 {
-    color: var(--east-bay);
+    color: #fce6ee;
     margin-bottom: 32px;
 
 }
 
 .slideshow-container {
     position: relative;
-    margin: auto;
-    background: #C2C3D3;
+    margin: 0 auto;
 }
 
 .slideshow {
-    position: relative;
-    justify-content: space-between;
-    padding: 40px;
-    display: flex;
-    flex-direction: row;
-    
+    display: none;
 }
 
 .swiper-slide {
-    display: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 40px;
 }
 
 .slide-image::before {
@@ -429,21 +413,23 @@ section {
     border-bottom: 5px solid #e20c5a;
     border-right: 5px solid #e20c5a;
     margin-top: -60px;
-    margin-left: 185px;
+    margin-left: 160px;
 }
 
 .slide-image {
-    width: 60%;
+    max-width: 20%;
 }
 
 .slide-image img {
     max-width: 100%;
     display: block;
-    vertical-align: middle;
+    vertical-align: center;
+    align-self: center;
 }
 
 .slide-text {
-    width: 100%;
+    margin-left: 50px;
+    padding: 10px;
 }
 
 .slide-text h2 {
@@ -456,7 +442,7 @@ section {
 .slide-text span {
     font-size: 14px;
     font-weight: 300;
-    color: 444885;
+    color: #444885;
     text-transform: capitalize;
 }
 
@@ -465,6 +451,7 @@ section {
     line-height: 28px;
     text-align: justify;
     padding: 24px;
+    color: #fce6ee;
 }
 
 .slide-text q {
@@ -472,7 +459,7 @@ section {
     display: flex;
     margin-top: 32px;
     align-items: center;
-    color: #042050;
+    color: #fce6ee;
 }
 
 .fade {
@@ -501,7 +488,6 @@ section {
 .subcriber-container .subcriber__content {
     justify-content: space-between;
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 2px solid #042050;
 }
@@ -531,8 +517,7 @@ section {
 
 .subcriber-container a {
     text-decoration: none;
-    color: #e5e8ed;
-    background: #042050;
+    color: black;
     padding: 24px;
     font-size: 24px;
     font-weight: 300;
@@ -547,6 +532,7 @@ section {
 
 .subcriber-container a:hover{
     color: #e20c5a;
+    background: #042050;
 }
 
 .about-content {
@@ -667,7 +653,7 @@ footer {
 
 
 /*responsive*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .header {
         padding: 20px 50px;
         z-index: 1000;
@@ -680,8 +666,8 @@ footer {
         display: inline-block;
         padding: 50px 50px;
         text-align: center;
-        width: 60%;
-        height: 70vh;
+        width: 100%;
+        height: 100vh;
         background: #fff;
         transition: .5s;
         z-index: 999;
@@ -715,135 +701,4 @@ footer {
         background-size: 25px;
         cursor: pointer;
     }
-    section {
-        padding: 100px 50px;
-    }
     
-    .benner {
-        padding: 150px 50px 100px;
-    }
-    
-    .benner .content {
-        display: grid;
-        grid-template-columns: repeat(1, 3fr);
-        align-items: center;
-        text-align: center;
-        justify-items: center;
-    }
-    
-    
-    .benner .content h1 {
-        font-size: 3em;
-        margin-bottom: 0;
-    }
-  
-    .benner .content cta-btn a {
-        display: inline-block;
-    }
-    
-    .content .sco-icons {
-        margin: 32px;
-    }
-    
-    .service-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .service-content .content-bx {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-    }
-    
-    .service-content .content-bx .img-box {
-        width: 100%;
-    }
-    
-    .service-content .content-bx .text-content {
-        width: 100%;
-    }
-    
-    .service-content .content-bx .text-content h2 {
-        font-size: 1.2em;
-        font-weight: 300;
-    }
-    
-    .service-content .content-bx .text-content p {
-        margin: 15px 0;
-        font-size: 14px;
-        line-height: 1.6;
-    }
-    
-    .slideshow-container {
-        width: 100%;
-    }
-    
-    .slideshow-container .swiper-slide {
-        align-items: center;
-    }
-    
-    .slideshow-container .swiper-slide .slide-image {
-        width: 73%;
-    }
-    
-    .slideshow-container .swiper-slide img {
-        max-width: 100%;
-    }
-    
-    .slide-image::after {
-        margin-left: 130px;
-    }
-    
-    .slideshow-container .swiper-slide .slide-text {
-        width: 100%;
-    }
-    
-    .slideshow-container .swiper-slide .slide-text h2 {
-        font-size: 1.2em;
-        font-weight: 300;
-    }
-    
-    .slideshow-container .swiper-slide .slide-text p {
-        width: 100%;
-        font-size: 14px;
-        text-align: left;
-        justify-items: baseline;
-    }
-    
-    .about-content {
-        align-items: center;
-    }
-    
-    .about-content .image-container img {
-        width: 100%;
-    }
-    
-    .about-content .text-box {
-        width: 100%;
-    }
-    
-    .about-content .text-box p {
-        font-size: 14px;
-    }
-    
-    .contact-heading h3 {
-        font-size: 2em;
-    }
-    
-    .contact-heading p {
-        font-size: 12px;
-        font-weight: 300;
-    }
-    
-    .text {
-        font-size: 14px;
-    }
-    
-    footer .sco-icons {
-        font-size: 12px;
-    }
-}
